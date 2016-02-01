@@ -53,99 +53,119 @@
 	margin: 0 auto;
 	width: 378px;
 
+	margin-top: 58px;
+
 	img {
 		margin: 2px;
 	}
+}
 
-	img.buttons {
-		border-radius: 6px;
-		font-family: Arial;
+#sidebar {
+	position: absolute;
+	display: block;
 
-		cursor: pointer;
-		color: #fff;
+	margin: 40px 0px 0px 20px;
+	width: 122px;
 
-		&.green {
-			box-shadow: rgb(164, 226, 113) 0px 1px 0px 0px inset;
-			border: 1px solid rgb(116, 184, 7);
+	h2 {
+		text-align: center;
+		color: #768d87;
 
-			text-shadow: rgb(82, 128, 9) 0px 1px 0px;
-			background: linear-gradient(rgb(138, 196, 3) 5%, rgb(119, 168, 9) 100%) rgb(138, 196, 3);
+		padding: 5px 0px;
+		margin-bottom: 8px;
+	}
 
-			&:hover {
-				background: linear-gradient(rgb(119, 168, 9) 5%, rgb(138, 196, 3) 100%) rgb(119, 168, 9);
-			}
+	#restart, #next { color: #fff; }
+}
+
+.buttons {
+	border-radius: 6px;
+	font-family: Arial;
+
+	cursor: pointer;
+	color: #fff;
+
+	&.green {
+		box-shadow: rgb(164, 226, 113) 0px 1px 0px 0px inset;
+		border: 1px solid rgb(116, 184, 7);
+
+		text-shadow: rgb(82, 128, 9) 0px 1px 0px;
+		background: linear-gradient(rgb(138, 196, 3) 5%, rgb(119, 168, 9) 100%) rgb(138, 196, 3);
+
+		&:hover {
+			background: linear-gradient(rgb(119, 168, 9) 5%, rgb(138, 196, 3) 100%) rgb(119, 168, 9);
 		}
+	}
 
-		&.blue {
-			box-shadow: rgb(240, 247, 250) 0px 1px 0px 0px;
-			border: 1px solid rgb(5, 127, 208);
+	&.blue {
+		box-shadow: rgb(240, 247, 250) 0px 1px 0px 0px;
+		border: 1px solid rgb(5, 127, 208);
 
-			text-shadow: rgb(91, 97, 120) 0px -1px 0px;
-			background: linear-gradient(rgb(51, 189, 239) 5%, rgb(1, 154, 210) 100%) rgb(51, 189, 239);
+		text-shadow: rgb(91, 97, 120) 0px -1px 0px;
+		background: linear-gradient(rgb(51, 189, 239) 5%, rgb(1, 154, 210) 100%) rgb(51, 189, 239);
 
-			&:hover {
-				background: linear-gradient(rgb(1, 154, 210) 5%, rgb(51, 189, 239) 100%) rgb(1, 154, 210);
-			}
+		&:hover {
+			background: linear-gradient(rgb(1, 154, 210) 5%, rgb(51, 189, 239) 100%) rgb(1, 154, 210);
 		}
+	}
 
-		&.orange {
-			box-shadow: rgb(255, 246, 175) 0px 1px 0px 0px;
-			border: 1px solid rgb(255, 170, 34);
+	&.orange {
+		box-shadow: rgb(255, 246, 175) 0px 1px 0px 0px;
+		border: 1px solid rgb(255, 170, 34);
 
-			text-shadow: rgb(255, 238, 102) 0px 1px 0px;
-			background: linear-gradient(rgb(255, 237, 100) 5%, rgb(255, 171, 35) 100%) rgb(255, 237, 100);
+		text-shadow: rgb(255, 238, 102) 0px 1px 0px;
+		background: linear-gradient(rgb(255, 237, 100) 5%, rgb(255, 171, 35) 100%) rgb(255, 237, 100);
 
-			&:hover {
-				background: linear-gradient(rgb(255, 171, 35) 5%, rgb(255, 237, 100) 100%) rgb(255, 171, 35);
-			}
+		&:hover {
+			background: linear-gradient(rgb(255, 171, 35) 5%, rgb(255, 237, 100) 100%) rgb(255, 171, 35);
 		}
+	}
 
-		&.purple {
-			box-shadow: rgb(225, 132, 243) 0px 1px 0px 0px inset;
-			border: 1px solid rgb(165, 17, 192);
+	&.purple {
+		box-shadow: rgb(225, 132, 243) 0px 1px 0px 0px inset;
+		border: 1px solid rgb(165, 17, 192);
 
-			text-shadow: rgb(155, 20, 179) 0px 1px 0px;
-			background: linear-gradient(rgb(194, 35, 222) 5%, rgb(162, 13, 189) 100%) rgb(194, 35, 222);
+		text-shadow: rgb(155, 20, 179) 0px 1px 0px;
+		background: linear-gradient(rgb(194, 35, 222) 5%, rgb(162, 13, 189) 100%) rgb(194, 35, 222);
 
-			&:hover {
-				background: linear-gradient(rgb(162, 13, 189) 5%, rgb(194, 35, 222) 100%) rgb(162, 13, 189);
-			}
+		&:hover {
+			background: linear-gradient(rgb(162, 13, 189) 5%, rgb(194, 35, 222) 100%) rgb(162, 13, 189);
 		}
+	}
 
-		&.red {
-			box-shadow: rgb(242, 156, 147) 0px 1px 0px 0px inset;
-			border: 1px solid rgb(216, 53, 38);
+	&.red {
+		box-shadow: rgb(242, 156, 147) 0px 1px 0px 0px inset;
+		border: 1px solid rgb(216, 53, 38);
 
-			text-shadow: rgb(178, 62, 53) 0px 1px 0px;
-			background: linear-gradient(rgb(254, 25, 0) 5%, rgb(206, 1, 0) 100%) rgb(254, 25, 0);
+		text-shadow: rgb(178, 62, 53) 0px 1px 0px;
+		background: linear-gradient(rgb(254, 25, 0) 5%, rgb(206, 1, 0) 100%) rgb(254, 25, 0);
 
-			&:hover {
-				background: linear-gradient(rgb(206, 1, 0) 5%, rgb(254, 25, 0) 100%) rgb(206, 1 ,0);
-			}
+		&:hover {
+			background: linear-gradient(rgb(206, 1, 0) 5%, rgb(254, 25, 0) 100%) rgb(206, 1 ,0);
 		}
+	}
 
-		&.grey {
-			box-shadow: rgb(145, 184, 179) 0px 1px 3px 0px inset;
-			border: 1px solid rgb(86, 105, 99);
+	&.grey {
+		box-shadow: rgb(145, 184, 179) 0px 1px 3px 0px inset;
+		border: 1px solid rgb(86, 105, 99);
 
-			text-shadow: rgb(43, 102, 94) 0px -1px 0px;
-			background: linear-gradient(rgb(118, 141, 135) 5%, rgb(108, 124, 124) 100%) rgb(118, 141, 135);
+		text-shadow: rgb(43, 102, 94) 0px -1px 0px;
+		background: linear-gradient(rgb(118, 141, 135) 5%, rgb(108, 124, 124) 100%) rgb(118, 141, 135);
 
-			&:hover {
-				background: linear-gradient(rgb(108, 124, 124) 5%, rgb(118, 141, 135) 100%) rgb(108, 124, 124);
-			}
+		&:hover {
+			background: linear-gradient(rgb(108, 124, 124) 5%, rgb(118, 141, 135) 100%) rgb(108, 124, 124);
 		}
+	}
 
-		&.brown {
-			box-shadow: rgb(166, 130, 126) 0px 1px 0px 0px inset;
-			border: 1px solid rgb(84, 56, 30);
+	&.brown {
+		box-shadow: rgb(166, 130, 126) 0px 1px 0px 0px inset;
+		border: 1px solid rgb(84, 56, 30);
 
-			text-shadow: rgb(77, 53, 52) 0px 1px 0px;
-			background: linear-gradient(rgb(125, 93, 59) 5%, rgb(99, 75, 48) 100%) rgb(125, 93, 59);
+		text-shadow: rgb(77, 53, 52) 0px 1px 0px;
+		background: linear-gradient(rgb(125, 93, 59) 5%, rgb(99, 75, 48) 100%) rgb(125, 93, 59);
 
-			&:hover {
-				background: linear-gradient(rgb(99, 75, 48) 5%, rgb(125, 93, 59) 100%) rgb(99, 75, 48);
-			}
+		&:hover {
+			background: linear-gradient(rgb(99, 75, 48) 5%, rgb(125, 93, 59) 100%) rgb(99, 75, 48);
 		}
 	}
 }

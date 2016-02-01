@@ -18,14 +18,26 @@
 </div>
 
 <div id="sidebar" ng-show="game_set">
-	<!-- There is going to be an image sequence, mistakes, elapsed time and repeat button -->
+	<div id="sequence-image" ng-show="current_image">
+		<h2>{{sequence_text}}</h2>
+		<img ng-src="./images/{{current_image[0]}}.png" alt="The current sequence" class="buttons" />
+	</div>
+
+	<h2 id="mistakes"></h2>
+	<h2 id="timer"></h2>
+
+	<h2 id="restart" class="buttons grey" ng-click="playSequence()">Restart</h2>
+	<h2 id="next" class="buttons grey" ng-click="next()" ng-show="game_finished">Next</h2>
 </div>
 
 <div id="image-grid" ng-show="game_set">
-	<img ng-repeat="image in grid_images track by $index" ng-src="./images/{{image[0]}}.png" alt="One of the images" ng-class='["buttons", "{{image[0]}}", "{{image[1]}}"]' ng-click="check()">
+	<img ng-repeat="image in grid_images track by $index" ng-src="./images/{{image[0]}}.png" alt="One of the images" ng-class='["buttons", "{{image[0]}}", "{{image[1]}}"]' ng-click="compare(image[0], image[1])" />
+
+	<audio id="audio" src="./sounds/correct.mp3"></audio>
 </div>
 
 <script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/controllers/game-controller.js"></script>
 <script type="text/javascript" src="app/services/sequence-service.js"></script>

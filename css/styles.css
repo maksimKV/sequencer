@@ -41,92 +41,113 @@
   display: block;
   margin: 0 auto;
   width: 378px;
+  margin-top: 58px;
 }
-/* line 56, ../scss/styles.scss */
+/* line 58, ../scss/styles.scss */
 #image-grid img {
   margin: 2px;
 }
-/* line 60, ../scss/styles.scss */
-#image-grid img.buttons {
+
+/* line 63, ../scss/styles.scss */
+#sidebar {
+  position: absolute;
+  display: block;
+  margin: 40px 0px 0px 20px;
+  width: 122px;
+}
+/* line 70, ../scss/styles.scss */
+#sidebar h2 {
+  text-align: center;
+  color: #768d87;
+  padding: 5px 0px;
+  margin-bottom: 8px;
+}
+/* line 78, ../scss/styles.scss */
+#sidebar #restart, #sidebar #next {
+  color: #fff;
+}
+
+/* line 81, ../scss/styles.scss */
+.buttons {
   border-radius: 6px;
   font-family: Arial;
   cursor: pointer;
   color: #fff;
 }
-/* line 67, ../scss/styles.scss */
-#image-grid img.buttons.green {
+/* line 88, ../scss/styles.scss */
+.buttons.green {
   box-shadow: #a4e271 0px 1px 0px 0px inset;
   border: 1px solid #74b807;
   text-shadow: #528009 0px 1px 0px;
   background: linear-gradient(#8ac403 5%, #77a809 100%) #8ac403;
 }
-/* line 74, ../scss/styles.scss */
-#image-grid img.buttons.green:hover {
+/* line 95, ../scss/styles.scss */
+.buttons.green:hover {
   background: linear-gradient(#77a809 5%, #8ac403 100%) #77a809;
 }
-/* line 79, ../scss/styles.scss */
-#image-grid img.buttons.blue {
+/* line 100, ../scss/styles.scss */
+.buttons.blue {
   box-shadow: #f0f7fa 0px 1px 0px 0px;
   border: 1px solid #057fd0;
   text-shadow: #5b6178 0px -1px 0px;
   background: linear-gradient(#33bdef 5%, #019ad2 100%) #33bdef;
 }
-/* line 86, ../scss/styles.scss */
-#image-grid img.buttons.blue:hover {
+/* line 107, ../scss/styles.scss */
+.buttons.blue:hover {
   background: linear-gradient(#019ad2 5%, #33bdef 100%) #019ad2;
 }
-/* line 91, ../scss/styles.scss */
-#image-grid img.buttons.orange {
+/* line 112, ../scss/styles.scss */
+.buttons.orange {
   box-shadow: #fff6af 0px 1px 0px 0px;
   border: 1px solid #ffaa22;
   text-shadow: #ffee66 0px 1px 0px;
   background: linear-gradient(#ffed64 5%, #ffab23 100%) #ffed64;
 }
-/* line 98, ../scss/styles.scss */
-#image-grid img.buttons.orange:hover {
+/* line 119, ../scss/styles.scss */
+.buttons.orange:hover {
   background: linear-gradient(#ffab23 5%, #ffed64 100%) #ffab23;
 }
-/* line 103, ../scss/styles.scss */
-#image-grid img.buttons.purple {
+/* line 124, ../scss/styles.scss */
+.buttons.purple {
   box-shadow: #e184f3 0px 1px 0px 0px inset;
   border: 1px solid #a511c0;
   text-shadow: #9b14b3 0px 1px 0px;
   background: linear-gradient(#c223de 5%, #a20dbd 100%) #c223de;
 }
-/* line 110, ../scss/styles.scss */
-#image-grid img.buttons.purple:hover {
+/* line 131, ../scss/styles.scss */
+.buttons.purple:hover {
   background: linear-gradient(#a20dbd 5%, #c223de 100%) #a20dbd;
 }
-/* line 115, ../scss/styles.scss */
-#image-grid img.buttons.red {
+/* line 136, ../scss/styles.scss */
+.buttons.red {
   box-shadow: #f29c93 0px 1px 0px 0px inset;
   border: 1px solid #d83526;
   text-shadow: #b23e35 0px 1px 0px;
   background: linear-gradient(#fe1900 5%, #ce0100 100%) #fe1900;
 }
-/* line 122, ../scss/styles.scss */
-#image-grid img.buttons.red:hover {
+/* line 143, ../scss/styles.scss */
+.buttons.red:hover {
   background: linear-gradient(#ce0100 5%, #fe1900 100%) #ce0100;
 }
-/* line 127, ../scss/styles.scss */
-#image-grid img.buttons.grey {
+/* line 148, ../scss/styles.scss */
+.buttons.grey {
   box-shadow: #91b8b3 0px 1px 3px 0px inset;
   border: 1px solid #566963;
   text-shadow: #2b665e 0px -1px 0px;
   background: linear-gradient(#768d87 5%, #6c7c7c 100%) #768d87;
 }
-/* line 134, ../scss/styles.scss */
-#image-grid img.buttons.grey:hover {
+/* line 155, ../scss/styles.scss */
+.buttons.grey:hover {
   background: linear-gradient(#6c7c7c 5%, #768d87 100%) #6c7c7c;
 }
-/* line 139, ../scss/styles.scss */
-#image-grid img.buttons.brown {
+/* line 160, ../scss/styles.scss */
+.buttons.brown {
   box-shadow: #a6827e 0px 1px 0px 0px inset;
   border: 1px solid #54381e;
   text-shadow: #4d3534 0px 1px 0px;
   background: linear-gradient(#7d5d3b 5%, #634b30 100%) #7d5d3b;
 }
-/* line 146, ../scss/styles.scss */
-#image-grid img.buttons.brown:hover {
+/* line 167, ../scss/styles.scss */
+.buttons.brown:hover {
   background: linear-gradient(#634b30 5%, #7d5d3b 100%) #634b30;
 }
