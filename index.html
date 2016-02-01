@@ -1,27 +1,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MemoryGame">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="SequenceGame">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="css/styles.css" media="screen" rel="stylesheet">
-	<title>Maksim Kanev's Sequencer Game</title>
+	<title>Maksim Kanev's Sequence Game</title>
 </head>
 
-<body ng-controller="GameController">
+<body ng-controller="GameController" data-ng-init="init()">
 
-<div id="start-page">
-	<!-- There is going to be an h2 tag with the level, a message and an image showing the sequence to follow and a start button -->
+<div id="start-page" ng-hide="game_set">
+	<h2>Level {{level}}</h2>
+
+	<p>{{sequence_text}}</p>
+	<img ng-src="./images/{{sequence_type}}.png" alt="The sequence to follow" />
+
+	<h2 id="begin" ng-click="begin()">Begin</h2>
 </div>
 
-<div id="sidebar">
+<div id="sidebar" ng-show="game_set">
 	<!-- There is going to be an image sequence, mistakes, elapsed time and repeat button -->
 </div>
 
-<div id="image-grid">
-	<!-- There is going to be an image grid -->
+<div id="image-grid" ng-show="game_set">
+	<img ng-repeat="image in grid_images track by $index" ng-src="./images/{{image[0]}}.png" alt="One of the images" ng-class='["buttons", "{{image[0]}}", "{{image[1]}}"]' ng-click="check()">
 </div>
 
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/controllers/game-controller.js"></script>
+<script type="text/javascript" src="app/services/sequence-service.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 (function(){
 
-var app = angular.module('SequencerGame', []);
+var app = angular.module('SequenceGame', []);
 	
 }());
