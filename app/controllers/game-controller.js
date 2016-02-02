@@ -164,6 +164,7 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 		{
 			if(action == "start"){
 				$scope.timer_function = $interval(function() {
+					/* Old method. It didn't work
 					var time = new Date().getTime() - $scope.start_time;
 					var elapsed = Math.floor(time / 100) / 10;
 
@@ -172,6 +173,27 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 					}
 
 					$scope.timer = elapsed;
+					*/
+
+					var time = new Date().getTime() - $scope.start_time;
+					var miliseconds = String(Math.floor(time / 100)).charAt(String(Math.floor(time / 100)).length - 1);
+
+					var seconds = Math.floor((time / 1000) % 60);
+					var minutes = Math.floor(((time / 1000) / 60) % 60);
+
+					var elapsed = String(seconds) + '.' + miliseconds;
+
+					if(minutes >= 1){
+						if(seconds < 10){
+							seconds = '0' + seconds;
+						}
+
+						elapsed = String(minutes).charAt(0) + '.' + String(seconds) + '.' + miliseconds;
+					}
+					
+
+					$scope.timer = elapsed;
+
 				}, 100);
 			} else if(action == "stop"){
 				$interval.cancel($scope.timer_function);
