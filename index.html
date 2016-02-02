@@ -18,15 +18,16 @@
 </div>
 
 <div id="sidebar" ng-show="game_set">
+	<h2 id="time">Time: {{timer}}</h2>
+	<h2 id="mistakes">Mistakes: {{mistakes}}</h2>
+
+	<h2 id="restart" class="buttons grey" ng-hide="game_finished" ng-click="playSequence()">Restart</h2>
+
 	<div id="sequence-image" ng-show="current_image">
 		<h2>{{sequence_text}}</h2>
 		<img ng-src="./images/{{current_image[0]}}.png" alt="The current sequence" class="buttons" />
 	</div>
 
-	<h2 id="mistakes"></h2>
-	<h2 id="timer"></h2>
-
-	<h2 id="restart" class="buttons grey" ng-click="playSequence()">Restart</h2>
 	<h2 id="next" class="buttons grey" ng-click="next()" ng-show="game_finished">Next</h2>
 </div>
 

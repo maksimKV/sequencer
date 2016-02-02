@@ -10,6 +10,7 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 		$scope.sequence_type = "";
 
 		$scope.game_set = false;
+		$scope.timer_function;
 
 		$scope.play_sequence = [];
 		$scope.grid_images = [];
@@ -23,9 +24,13 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 		$scope.game_index = 0;
 		$scope.mistakes = 0;
 
+		$scope.timer = "0.0";
+		$scope.start_time = null;
+
 		$scope.$watch('game_index', function(){
 			if($scope.game_index == $scope.sequence_length){
 				$scope.game_finished = true;
+				$scope.timerCount("stop");
 			}
 		});
 
@@ -51,7 +56,7 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 		}
 
 		$scope.playSequence = function(){
-			if($scope.sequence_finished)
+			if($scope.sequence_finished && !$scope.game_finished)
 			{
 				$scope.sequence_text = "Sequence";
 				$scope.sequence_finished = false;
@@ -80,6 +85,12 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 
 						$scope.current_image = "";
 						$scope.sequence_text = "";
+
+						if(!$scope.start_time)
+						{
+							$scope.start_time = new Date().getTime();
+							$scope.timerCount("start");
+						}
 					}
 					
 					i++;
@@ -115,7 +126,8 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 
 		}
 
-		$scope.playSound = function(type){
+		$scope.playSound = function(type)
+		{
 			var element = $("#audio");
 
 			if(type == "correct"){
@@ -128,7 +140,8 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 			}
 		}
 
-		$scope.next = function(){
+		$scope.next = function()
+		{
 			$scope.level++;
 			$scope.game_index = 0;
 
@@ -139,7 +152,31 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 			$scope.game_set = false;
 
 			$scope.sequence_length = $scope.level + 2;
+			$scope.grid_images = [];
+
+			$scope.timer = "0.0";
+			$scope.start_time = null;
+
 			$scope.init();
+		}
+
+		$scope.timerCount = function(action)
+		{
+			if(action == "start"){
+				$scope.timer_function = $interval(function() {
+					var time = new Date().getTime() - $scope.start_time;
+					var elapsed = Math.floor(time / 100) / 10;
+
+					if(Math.round(elapsed) == elapsed) { 
+						elapsed += '.0'; 
+					}
+
+					$scope.timer = elapsed;
+				}, 100);
+			} else if(action == "stop"){
+				$interval.cancel($scope.timer_function);
+				$scope.opened_image = true;
+			}
 		}
 
 }]);
