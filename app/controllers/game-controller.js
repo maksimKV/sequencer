@@ -1,7 +1,7 @@
 var app = angular.module('SequenceGame');
 
-app.controller('GameController', ['$scope', '$interval', 'SequenceService',
-	function($scope, $interval, SequenceService) {
+app.controller('GameController', ['$scope', '$interval', '$timeout', 'SequenceService',
+	function($scope, $interval, $timeout, SequenceService) {
 
 		$scope.level = 1;
 		$scope.sequence_length = 3;
@@ -64,37 +64,54 @@ app.controller('GameController', ['$scope', '$interval', 'SequenceService',
 				$scope.game_finished = false;
 				$scope.game_index = 0;
 
-				var i = 0;
+				var i = 1;
+				var index = 0;
 				$interval(function() {
 					var element = $('#sequence-image img');
 					var element_classes = element.attr("class").split(/\s+/);
 
-					if(i < $scope.sequence_length)
-					{
-						$scope.current_image = $scope.play_sequence[i];
+					$scope.current_image = $scope.play_sequence[index];
 
-						if(element_classes.length > 1){
-							element.removeClass(element_classes[1]);
+					if(i < 2)
+					{
+						if(element.hasClass('hide')){
+							element.removeClass('hide');
 						}
 
 						element.addClass($scope.current_image[1]);
+						element.addClass('show');						
 					}
-					else {
+
+					if(i % 2 == 0){
+						element.removeClass('show');
+						element.addClass('hide');
+
+						index++;
+					} else {
 						element.removeClass(element_classes[1]);
-						$scope.sequence_finished = true;
+						element.addClass($scope.current_image[1]);
 
-						$scope.current_image = "";
-						$scope.sequence_text = "";
-
-						if(!$scope.start_time)
-						{
-							$scope.start_time = new Date().getTime();
-							$scope.timerCount("start");
-						}
+						element.removeClass('hide');
+						element.addClass('show');					
 					}
-					
+
+					if(i == $scope.sequence_length * 2){
+						$timeout(function () {
+							$scope.sequence_finished = true;
+
+							$scope.current_image = "";
+							$scope.sequence_text = "";
+
+							if(!$scope.start_time)
+							{
+								$scope.start_time = new Date().getTime();
+								$scope.timerCount("start");
+							}
+						}, 1000);
+					}
+
 					i++;
-				}, 1000, $scope.sequence_length + 1);
+				}, 1500, $scope.sequence_length * 2);
 			}
 		}
 

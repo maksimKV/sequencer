@@ -1,4 +1,4 @@
-/* line 9, ../scss/styles.scss */
+/* line 11, ../scss/styles.scss */
 #start-page {
   width: 300px;
   margin: 0 auto;
@@ -6,19 +6,19 @@
   display: block;
   font-family: Ariel;
 }
-/* line 17, ../scss/styles.scss */
+/* line 19, ../scss/styles.scss */
 #start-page h2 {
   font-size: 52px;
   text-align: center;
 }
-/* line 22, ../scss/styles.scss */
+/* line 24, ../scss/styles.scss */
 #start-page p {
   font-weight: bold;
   font-size: 22px;
   text-align: center;
   margin: 12px 0px;
 }
-/* line 30, ../scss/styles.scss */
+/* line 32, ../scss/styles.scss */
 #start-page #begin {
   display: block;
   background-color: #6c7c7c;
@@ -30,12 +30,12 @@
   margin-top: 60px;
   cursor: pointer;
 }
-/* line 43, ../scss/styles.scss */
+/* line 45, ../scss/styles.scss */
 #start-page #begin:hover {
   background-color: #768d87;
 }
 
-/* line 49, ../scss/styles.scss */
+/* line 51, ../scss/styles.scss */
 #image-grid {
   position: relative;
   display: block;
@@ -43,12 +43,12 @@
   width: 378px;
   margin-top: 58px;
 }
-/* line 58, ../scss/styles.scss */
+/* line 60, ../scss/styles.scss */
 #image-grid img {
   margin: 2px;
 }
 
-/* line 63, ../scss/styles.scss */
+/* line 65, ../scss/styles.scss */
 #sidebar {
   position: absolute;
   display: block;
@@ -56,114 +56,139 @@
   left: 30px;
   top: 60px;
 }
-/* line 71, ../scss/styles.scss */
+/* line 73, ../scss/styles.scss */
 #sidebar h2 {
   text-align: center;
   color: #768d87;
   padding: 5px 0px;
   margin-bottom: 8px;
 }
-/* line 79, ../scss/styles.scss */
+/* line 81, ../scss/styles.scss */
+#sidebar img {
+  display: none;
+}
+/* line 85, ../scss/styles.scss */
+#sidebar img.show, #sidebar img.hide {
+  opacity: 1;
+  display: block;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+/* line 95, ../scss/styles.scss */
+#sidebar img.hide {
+  opacity: 0;
+}
+/* line 101, ../scss/styles.scss */
 #sidebar #restart, #sidebar #next {
   color: #fff;
 }
-/* line 81, ../scss/styles.scss */
+/* line 103, ../scss/styles.scss */
 #sidebar #mistakes, #sidebar #time {
   font-size: 22px;
   text-align: left;
   margin: 0px 0px 8px 0px;
   padding: 0px;
 }
-/* line 89, ../scss/styles.scss */
+/* line 111, ../scss/styles.scss */
 #sidebar #time {
   color: #33bdef;
 }
-/* line 90, ../scss/styles.scss */
+/* line 112, ../scss/styles.scss */
 #sidebar #mistakes {
   color: #fe1900;
 }
 
-/* line 93, ../scss/styles.scss */
+/* line 115, ../scss/styles.scss */
 .buttons {
   border-radius: 6px;
   font-family: Arial;
   cursor: pointer;
   color: #fff;
 }
-/* line 100, ../scss/styles.scss */
+/* line 122, ../scss/styles.scss */
 .buttons.green {
   box-shadow: #a4e271 0px 1px 0px 0px inset;
   border: 1px solid #74b807;
   text-shadow: #528009 0px 1px 0px;
   background: linear-gradient(#8ac403 5%, #77a809 100%) #8ac403;
 }
-/* line 107, ../scss/styles.scss */
+/* line 129, ../scss/styles.scss */
 .buttons.green:hover {
   background: linear-gradient(#77a809 5%, #8ac403 100%) #77a809;
 }
-/* line 112, ../scss/styles.scss */
+/* line 134, ../scss/styles.scss */
 .buttons.blue {
   box-shadow: #f0f7fa 0px 1px 0px 0px;
   border: 1px solid #057fd0;
   text-shadow: #5b6178 0px -1px 0px;
   background: linear-gradient(#33bdef 5%, #019ad2 100%) #33bdef;
 }
-/* line 119, ../scss/styles.scss */
+/* line 141, ../scss/styles.scss */
 .buttons.blue:hover {
   background: linear-gradient(#019ad2 5%, #33bdef 100%) #019ad2;
 }
-/* line 124, ../scss/styles.scss */
+/* line 146, ../scss/styles.scss */
 .buttons.orange {
   box-shadow: #fff6af 0px 1px 0px 0px;
   border: 1px solid #ffaa22;
   text-shadow: #ffee66 0px 1px 0px;
   background: linear-gradient(#ffed64 5%, #ffab23 100%) #ffed64;
 }
-/* line 131, ../scss/styles.scss */
+/* line 153, ../scss/styles.scss */
 .buttons.orange:hover {
   background: linear-gradient(#ffab23 5%, #ffed64 100%) #ffab23;
 }
-/* line 136, ../scss/styles.scss */
+/* line 158, ../scss/styles.scss */
 .buttons.purple {
   box-shadow: #e184f3 0px 1px 0px 0px inset;
   border: 1px solid #a511c0;
   text-shadow: #9b14b3 0px 1px 0px;
   background: linear-gradient(#c223de 5%, #a20dbd 100%) #c223de;
 }
-/* line 143, ../scss/styles.scss */
+/* line 165, ../scss/styles.scss */
 .buttons.purple:hover {
   background: linear-gradient(#a20dbd 5%, #c223de 100%) #a20dbd;
 }
-/* line 148, ../scss/styles.scss */
+/* line 170, ../scss/styles.scss */
 .buttons.red {
   box-shadow: #f29c93 0px 1px 0px 0px inset;
   border: 1px solid #d83526;
   text-shadow: #b23e35 0px 1px 0px;
   background: linear-gradient(#fe1900 5%, #ce0100 100%) #fe1900;
 }
-/* line 155, ../scss/styles.scss */
+/* line 177, ../scss/styles.scss */
 .buttons.red:hover {
   background: linear-gradient(#ce0100 5%, #fe1900 100%) #ce0100;
 }
-/* line 160, ../scss/styles.scss */
+/* line 182, ../scss/styles.scss */
 .buttons.grey {
   box-shadow: #91b8b3 0px 1px 3px 0px inset;
   border: 1px solid #566963;
   text-shadow: #2b665e 0px -1px 0px;
   background: linear-gradient(#768d87 5%, #6c7c7c 100%) #768d87;
 }
-/* line 167, ../scss/styles.scss */
+/* line 189, ../scss/styles.scss */
 .buttons.grey:hover {
   background: linear-gradient(#6c7c7c 5%, #768d87 100%) #6c7c7c;
 }
-/* line 172, ../scss/styles.scss */
+/* line 194, ../scss/styles.scss */
 .buttons.brown {
   box-shadow: #a6827e 0px 1px 0px 0px inset;
   border: 1px solid #54381e;
   text-shadow: #4d3534 0px 1px 0px;
   background: linear-gradient(#7d5d3b 5%, #634b30 100%) #7d5d3b;
 }
-/* line 179, ../scss/styles.scss */
+/* line 201, ../scss/styles.scss */
 .buttons.brown:hover {
   background: linear-gradient(#634b30 5%, #7d5d3b 100%) #634b30;
 }

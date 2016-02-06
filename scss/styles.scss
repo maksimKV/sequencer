@@ -6,6 +6,8 @@
 // Purple: #c223de
 // Brown: #7d5d3b
 
+@import "compass/css3";
+
 #start-page {
 	width: 300px;
 	margin: 0 auto;
@@ -74,6 +76,26 @@
 
 		padding: 5px 0px;
 		margin-bottom: 8px;
+	}
+
+	img { 
+		//opacity: 0;
+		display: none;
+
+		&.show {
+			opacity: 1;
+			display: block;
+
+			@include transition-property(all);
+
+  			@include transition-duration(1s);
+  			@include transition-timing-function(linear);
+		}
+
+		&.hide {
+			@extend .show;
+			opacity: 0;
+		}
 	}
 
 	#restart, #next { color: #fff; }
