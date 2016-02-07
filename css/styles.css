@@ -65,12 +65,11 @@
 }
 /* line 81, ../scss/styles.scss */
 #sidebar img {
-  display: none;
+  opacity: 0;
 }
-/* line 85, ../scss/styles.scss */
+/* line 84, ../scss/styles.scss */
 #sidebar img.show, #sidebar img.hide {
   opacity: 1;
-  display: block;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -84,111 +83,111 @@
   -o-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-/* line 95, ../scss/styles.scss */
+/* line 92, ../scss/styles.scss */
 #sidebar img.hide {
   opacity: 0;
 }
-/* line 101, ../scss/styles.scss */
+/* line 98, ../scss/styles.scss */
 #sidebar #restart, #sidebar #next {
   color: #fff;
 }
-/* line 103, ../scss/styles.scss */
+/* line 100, ../scss/styles.scss */
 #sidebar #mistakes, #sidebar #time {
   font-size: 22px;
   text-align: left;
   margin: 0px 0px 8px 0px;
   padding: 0px;
 }
-/* line 111, ../scss/styles.scss */
+/* line 108, ../scss/styles.scss */
 #sidebar #time {
   color: #33bdef;
 }
-/* line 112, ../scss/styles.scss */
+/* line 109, ../scss/styles.scss */
 #sidebar #mistakes {
   color: #fe1900;
 }
 
-/* line 115, ../scss/styles.scss */
+/* line 112, ../scss/styles.scss */
 .buttons {
   border-radius: 6px;
   font-family: Arial;
   cursor: pointer;
   color: #fff;
 }
-/* line 122, ../scss/styles.scss */
+/* line 119, ../scss/styles.scss */
 .buttons.green {
   box-shadow: #a4e271 0px 1px 0px 0px inset;
   border: 1px solid #74b807;
   text-shadow: #528009 0px 1px 0px;
   background: linear-gradient(#8ac403 5%, #77a809 100%) #8ac403;
 }
-/* line 129, ../scss/styles.scss */
+/* line 126, ../scss/styles.scss */
 .buttons.green:hover {
   background: linear-gradient(#77a809 5%, #8ac403 100%) #77a809;
 }
-/* line 134, ../scss/styles.scss */
+/* line 131, ../scss/styles.scss */
 .buttons.blue {
   box-shadow: #f0f7fa 0px 1px 0px 0px;
   border: 1px solid #057fd0;
   text-shadow: #5b6178 0px -1px 0px;
   background: linear-gradient(#33bdef 5%, #019ad2 100%) #33bdef;
 }
-/* line 141, ../scss/styles.scss */
+/* line 138, ../scss/styles.scss */
 .buttons.blue:hover {
   background: linear-gradient(#019ad2 5%, #33bdef 100%) #019ad2;
 }
-/* line 146, ../scss/styles.scss */
+/* line 143, ../scss/styles.scss */
 .buttons.orange {
   box-shadow: #fff6af 0px 1px 0px 0px;
   border: 1px solid #ffaa22;
   text-shadow: #ffee66 0px 1px 0px;
   background: linear-gradient(#ffed64 5%, #ffab23 100%) #ffed64;
 }
-/* line 153, ../scss/styles.scss */
+/* line 150, ../scss/styles.scss */
 .buttons.orange:hover {
   background: linear-gradient(#ffab23 5%, #ffed64 100%) #ffab23;
 }
-/* line 158, ../scss/styles.scss */
+/* line 155, ../scss/styles.scss */
 .buttons.purple {
   box-shadow: #e184f3 0px 1px 0px 0px inset;
   border: 1px solid #a511c0;
   text-shadow: #9b14b3 0px 1px 0px;
   background: linear-gradient(#c223de 5%, #a20dbd 100%) #c223de;
 }
-/* line 165, ../scss/styles.scss */
+/* line 162, ../scss/styles.scss */
 .buttons.purple:hover {
   background: linear-gradient(#a20dbd 5%, #c223de 100%) #a20dbd;
 }
-/* line 170, ../scss/styles.scss */
+/* line 167, ../scss/styles.scss */
 .buttons.red {
   box-shadow: #f29c93 0px 1px 0px 0px inset;
   border: 1px solid #d83526;
   text-shadow: #b23e35 0px 1px 0px;
   background: linear-gradient(#fe1900 5%, #ce0100 100%) #fe1900;
 }
-/* line 177, ../scss/styles.scss */
+/* line 174, ../scss/styles.scss */
 .buttons.red:hover {
   background: linear-gradient(#ce0100 5%, #fe1900 100%) #ce0100;
 }
-/* line 182, ../scss/styles.scss */
+/* line 179, ../scss/styles.scss */
 .buttons.grey {
   box-shadow: #91b8b3 0px 1px 3px 0px inset;
   border: 1px solid #566963;
   text-shadow: #2b665e 0px -1px 0px;
   background: linear-gradient(#768d87 5%, #6c7c7c 100%) #768d87;
 }
-/* line 189, ../scss/styles.scss */
+/* line 186, ../scss/styles.scss */
 .buttons.grey:hover {
   background: linear-gradient(#6c7c7c 5%, #768d87 100%) #6c7c7c;
 }
-/* line 194, ../scss/styles.scss */
+/* line 191, ../scss/styles.scss */
 .buttons.brown {
   box-shadow: #a6827e 0px 1px 0px 0px inset;
   border: 1px solid #54381e;
   text-shadow: #4d3534 0px 1px 0px;
   background: linear-gradient(#7d5d3b 5%, #634b30 100%) #7d5d3b;
 }
-/* line 201, ../scss/styles.scss */
+/* line 198, ../scss/styles.scss */
 .buttons.brown:hover {
   background: linear-gradient(#634b30 5%, #7d5d3b 100%) #634b30;
 }

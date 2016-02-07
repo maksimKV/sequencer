@@ -66,6 +66,9 @@ app.controller('GameController', ['$scope', '$interval', '$timeout', 'SequenceSe
 
 				var i = 1;
 				var index = 0;
+
+				$scope.current_image = $scope.play_sequence[0];
+
 				$interval(function() {
 					var element = $('#sequence-image img');
 					var element_classes = element.attr("class").split(/\s+/);
